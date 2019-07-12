@@ -1,0 +1,3289 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EmployeePage.ascx.cs" Inherits="Bilikis.HRManagementSystem.EmployeePage" %>
+<style type="text/css">
+    .auto-style3 {
+    }
+    .auto-style13 {
+        width: 199px;
+        height: 23px;
+    }
+    .auto-style14 {
+        width: 198px;
+        height: 23px;
+    }
+    .auto-style15 {
+        height: 23px;
+    }
+    .auto-style16 {
+    }
+    .auto-style18 {
+        width: 320px;
+    }
+    .auto-style20 {
+        width: 305px;
+    }
+    .auto-style22 {
+        width: 337px;
+    }
+    .auto-style23 {
+        height: 26px;
+    }
+    .auto-style25 {
+        width: 306px;
+    }
+    .auto-style29 {
+        width: 208px;
+    }
+    .auto-style30 {
+        width: 208px;
+        height: 23px;
+    }
+    .auto-style31 {
+        width: 132px;
+    }
+    .auto-style32 {
+        width: 132px;
+        height: 23px;
+    }
+    .auto-style33 {
+        width: 130px;
+    }
+    .auto-style35 {
+        width: 303px;
+    }
+    .auto-style36 {
+    }
+    .auto-style37 {
+        width: 244px;
+    }
+    .auto-style39 {
+        width: 233px;
+        height: 23px;
+    }
+    .auto-style40 {
+        width: 244px;
+        height: 23px;
+    }
+    .auto-style43 {
+    }
+    .auto-style45 {
+        width: 303px;
+        height: 23px;
+    }
+    .auto-style46 {
+        width: 64px;
+    }
+    .auto-style47 {
+        width: 373px;
+    }
+    .auto-style50 {
+    }
+    .auto-style51 {
+        width: 380px;
+    }
+    #TxtContAdd {
+        width: 299px;
+        height: 62px;
+    }
+    #txtSpouseContAddrs {
+        width: 299px;
+        height: 39px;
+    }
+    #txtNxtOfKinContAdd {
+        width: 305px;
+        height: 60px;
+    }
+    .auto-style65 {        color: #CC3300;
+    }
+    .auto-style67 {
+    }
+    #txtRefContAddr {
+        width: 299px;
+    }
+    .auto-style69 {
+        height: 33px;
+    }
+    .auto-style59 {        margin-left: 40px;
+    }
+    .auto-style58 {
+        height: 23px;
+        width: 163px;
+    }
+    .auto-style53 {
+        width: 173px;
+        height: 23px;
+    }
+    .auto-style52 {
+        height: 23px;
+    }
+    .auto-style54 {
+        width: 102px;
+        height: 23px;
+    }
+    .auto-style72 {
+        width: 249px;
+    }
+    .auto-style74 {
+        height: 23px;
+    }
+    .auto-style75 {
+        height: 23px;
+        width: 99px;
+    }
+    .auto-style76 {
+        margin-left: 40px;
+        height: 23px;
+    }
+    .auto-style77 {
+        width: 380px;
+        height: 23px;
+    }
+    .auto-style64 {
+        font-weight: 700;
+    }
+    .auto-style78 {
+        width: 196px;
+    }
+    .auto-style79 {
+        width: 67px;
+    }
+    .auto-style80 {
+        width: 67px;
+        height: 23px;
+    }
+    .auto-style81 {
+        width: 196px;
+        height: 23px;
+    }
+    #txtResponse {
+        height: 16px;
+    }
+    .auto-style82 {
+        color: #CC3300;
+    }
+    .auto-style83 {
+        width: 198px;
+    }
+    .auto-style84 {
+        height: 33px;
+        width: 198px;
+    }
+    .auto-style86 {
+        height: 23px;
+        width: 274px;
+    }
+    .auto-style87 {
+        width: 231px;
+    }
+    .auto-style94 {
+    }
+    .auto-style95 {
+        width: 94px;
+        height: 23px;
+    }
+    .auto-style96 {
+    }
+    .auto-style97 {
+        height: 23px;
+        width: 348px;
+    }
+    #txtExcelPerformance {
+        width: 325px;
+        height: 52px;
+    }
+    #txtExcelPerformance0 {
+        width: 325px;
+        height: 52px;
+    }
+    #txtExcelPerformance1 {
+        width: 325px;
+        height: 52px;
+    }
+    #txtExcelPerformance2 {
+        width: 325px;
+        height: 52px;
+    }
+    .auto-style98 {
+        text-align: justify;
+    }
+    .auto-style99 {
+        font-size: medium;
+    }
+    </style>
+<table style="width:100%;">
+    <tr>
+        <td valign="top" style="width: 150px"><table>
+            <tr><td> 
+            <asp:Button ID="Button5" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Home" Width="150px" OnClick="Button5_Click" />
+            </td></tr>
+            <tr><td> 
+            <asp:Button ID="Button1" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="View Profile" Width="150px" OnClick="Button1_Click" />
+            </td></tr>
+            
+            <tr><td> 
+            <asp:Button ID="Button2" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Update Profile" Width="150px" OnClick="Button2_Click" />
+                </td></tr>
+            <tr><td> 
+                <asp:Button ID="Button14" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Qualification" Width="150px" OnClick="Button14_Click" />
+                </td></tr>
+            <tr><td> 
+                <asp:Button ID="Button12" runat="server" Height="35px" style="color: #CC3300; font-weight: 700; font-size: small;" Text="Professional Qualification" Width="150px" OnClick="Button12_Click" />
+                </td></tr>
+            <tr><td> 
+                <asp:Button ID="Button13" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Upload Documents" Width="150px" OnClick="Button13_Click" />
+                </td></tr>
+            <tr><td> 
+            <asp:Button ID="Button3" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Query " Width="150px" OnClick="Button3_Click" />
+                </td></tr><tr><td> 
+            <asp:Button ID="Button15" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Leave" Width="150px" OnClick="Button15_Click"  />
+                </td></tr><tr><td> 
+            <asp:Button ID="Button4" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Apprasial" Width="150px" OnClick="Button4_Click" />
+                </td></tr> tr><td> 
+            <asp:Button ID="Button10" runat="server" Height="35px" style="color: #CC3300; font-weight: 700" Text="Pension &amp; Retiremnt" Width="150px" />
+                </td></tr>
+            <tr><td> &nbsp;</td></tr>
+    <tr><td>&nbsp;</td></tr><tr><td></td></tr></table></td>
+        <td colspan="2" valign="top">
+<asp:MultiView ID="MViewEmployee" runat="server">
+    <asp:View ID="View1" runat="server">
+         <table style="width: 100%; border: medium solid #CC3300; width:100%;">
+        <tr>
+            <td class="auto-style50">
+                &nbsp;</td>
+            <td class="auto-style51">
+                <asp:Label ID="LbWelcom0" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="12pt" ForeColor="#CC0066" Text=" Welcome! Please Select Module you want to use" style="font-size: large"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style50">&nbsp;</td>
+            <td class="auto-style51">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+             <tr>
+                 <td class="auto-style50">&nbsp;</td>
+                 <td class="auto-style51">
+                     &nbsp;</td>
+                 <td>&nbsp;</td>
+             </tr>
+        <tr>
+            <td class="auto-style50">&nbsp;</td>
+            <td class="auto-style51">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style50">&nbsp;</td>
+            <td class="auto-style51">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style50">&nbsp;</td>
+            <td class="auto-style51">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style50">&nbsp;</td>
+            <td class="auto-style51">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style50">&nbsp;</td>
+            <td class="auto-style51">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    </asp:View>
+    <asp:View ID="ViewEmployeeBiodata" runat="server">
+        <table style="border-style: solid; border-color: #CC3300; width:100%;">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table style="width: 95%;  margin-left:20px; ">
+                        <tr>
+                            <td class="auto-style59"><strong style="color: #CC3300; font-size: large">Personal Details</strong></td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5">
+                                <asp:Image ID="Image2" runat="server" BorderColor="#CC3300" BorderWidth="3px" Height="186px" ImageAlign="Middle" Width="187px" ImageUrl="~/Image/BilikisPassport.jpg" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>Position applied for:</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label62" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>First Name</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label63" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td><strong>State of Origin</strong></td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label53" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>Middle Name</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label64" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td><strong>LGA</strong></td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label54" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>Last Name</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label65" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td><strong>Home Town</strong></td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label55" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>Gender</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label66" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td><strong>Email</strong></td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label56" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>Marital Status</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label60" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td><strong>PhoneNo</strong></td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label57" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>DOB</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label61" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td><strong>ContactAddress</strong></td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label58" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><strong>Age</strong></td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label59" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5">
+                                <asp:Label ID="LbSpouseInfo1" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-size: medium; font-style: italic" Text="Employment Details"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Label118" runat="server" style="font-weight: 700" Text="Department"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label122" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label119" runat="server" style="font-weight: 700" Text="Work Location"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label124" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Label120" runat="server" style="font-weight: 700" Text="Level"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label123" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label121" runat="server" style="font-weight: 700" Text="Salary"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label125" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5">
+                                <asp:Label ID="LbSpouseInfo0" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-size: medium; font-style: italic" Text="Spouse Infomation (If Married)"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbspouseFNam1" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Spouse First Name"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label67" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbSpouseMN2" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: small" Text="Spouse Middle Name"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label70" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbSpousLN1" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Spouse Last Name"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label68" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbSpousLN2" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Spouse Last Name"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label71" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbSpouseEmail0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Spouse Email"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label69" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbSpouseAddrs0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Spouse Address"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label72" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbSpouseOccup0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Occupation"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label73" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbSpouseEmplo0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Spouse Employer"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label74" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5">
+                                <asp:Label ID="LbNxtOfKinInfo0" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic; font-size: medium;" Text="Next of Kin Information"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbnxtOfKinFName0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="First Name"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label75" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbnxtOfKinMidName0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Middle Name"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label79" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="nxtOfKinLNameLabel0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Last Name"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label76" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbNxtOfKinrelationship0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Relationship"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label80" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="nxtOfKinphNoLabel0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Phone No"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label77" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbnxtOfKinEmail0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Email"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label81" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Lboccupation0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Occupation"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label78" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="LbnxtOfKinContAddr0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Contact Address"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label82" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5">
+                                <asp:Label ID="LbBankInfo0" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic" Text="Bank Details"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbBankName1" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Bank Name"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label89" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbAcctName2" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Account Name"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label90" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="LbAcctNum2" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: medium" Text="Account Number"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label91" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5">
+                                <asp:Label ID="Label83" runat="server" style="color: #CC3300; font-weight: 700; font-size: large; font-style: italic" Text="Refree Details"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style76"></td>
+                            <td class="auto-style77"></td>
+                            <td class="auto-style15"></td>
+                            <td class="auto-style15"></td>
+                            <td class="auto-style15"></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59"><asp:Label ID="Label96" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300;" Text="First Refree"></asp:Label>
+                            </td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>
+                                <asp:Label ID="Label112" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300;" Text="Second Refree"></asp:Label>
+                            </td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Label84" runat="server" style="font-weight: 700" Text="First Name:"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label97" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label107" runat="server" style="font-weight: 700" Text="First Name:"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label102" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Label92" runat="server" CssClass="auto-style64" Text="Middle Name:"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label98" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label108" runat="server" CssClass="auto-style64" Text="Middle Name:"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label103" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Label93" runat="server" CssClass="auto-style64" Text="Last Name:"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label99" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label109" runat="server" CssClass="auto-style64" Text="Last Name:"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label104" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Label94" runat="server" CssClass="auto-style64" Text="Phone No:"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label100" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label110" runat="server" CssClass="auto-style64" Text="Phone No:"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label105" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">
+                                <asp:Label ID="Label95" runat="server" CssClass="auto-style64" Text="Email:"></asp:Label>
+                            </td>
+                            <td class="auto-style51">
+                                <asp:Label ID="Label101" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label111" runat="server" CssClass="auto-style64" Text="Email:"></asp:Label>
+                            </td>
+                            <td class="auto-style50">
+                                <asp:Label ID="Label106" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium;" Text="Label"></asp:Label>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5"><strong style="color: #CC3300; font-size: large">Qualification</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style48" colspan="5">
+                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="QualificationID" DataSourceID="SqlDataSource1" EnableModelValidation="True" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <Columns>
+                                        <asp:BoundField DataField="QualificationID" HeaderText="QualificationID" InsertVisible="False" ReadOnly="True" SortExpression="QualificationID" />
+                                        <asp:BoundField DataField="InstitutionName" HeaderText="InstitutionName" SortExpression="InstitutionName" />
+                                        <asp:BoundField DataField="QualificationType" HeaderText="QualificationType" SortExpression="QualificationType" />
+                                        <asp:BoundField DataField="Course" HeaderText="Course" SortExpression="Course" />
+                                        <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+                                        <asp:BoundField DataField="StartYear" HeaderText="StartYear" SortExpression="StartYear" />
+                                        <asp:BoundField DataField="EndYear" HeaderText="EndYear" SortExpression="EndYear" />
+                                    </Columns>
+                                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SiteSqlServer %>" SelectCommand="SELECT [QualificationID], [InstitutionName], [QualificationType], [Course], [Grade], [StartYear], [EndYear] FROM [ApplicantQualification]"></asp:SqlDataSource>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style58"></td>
+                            <td class="auto-style53"></td>
+                            <td class="auto-style52"></td>
+                            <td class="auto-style54"></td>
+                            <td class="auto-style52"></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5"><strong style="color: #CC3300; font-size: large">Professional Qualification</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style48" colspan="5">
+                                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SiteSqlServer %>" SelectCommand="SELECT [ProfQualificationID], [CertificationName], [CertificateNo], [Stage], [Year] FROM [ApplicantProfQualification]"></asp:SqlDataSource>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style51">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style51"><strong style="color: #CC3300; font-size: large">Working&nbsp; Experience</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style48" colspan="5">
+                                <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:SiteSqlServer %>" SelectCommand="SELECT [WorkExperienceID], [CompanyName], [PositionHeld], [JobDescriprtion], [SalaryReceived], [StartYear], [EndYear] FROM [ApplicantWorkExperience]"></asp:SqlDataSource>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5"><strong style="color: #CC3300; font-size: large">Uploaded Document</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59" colspan="5">
+                                <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="DocumentID" DataSourceID="SqlDataSource4" EnableModelValidation="True" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <Columns>
+                                        <asp:BoundField DataField="DocumentID" HeaderText="DocumentID" InsertVisible="False" ReadOnly="True" SortExpression="DocumentID" />
+                                        <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+                                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                                        <asp:BoundField DataField="Path" HeaderText="Path" SortExpression="Path" />
+                                    </Columns>
+                                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                                    <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:SiteSqlServer %>" SelectCommand="SELECT [DocumentID], [Type], [Name], [Path] FROM [ApplicantDocument]"></asp:SqlDataSource>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style59">&nbsp;</td>
+                            <td class="auto-style51">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="auto-style50">&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </asp:View>
+    
+    
+    
+    
+
+      
+    
+    <asp:View ID="profile" runat="server">
+
+                <table style="width: 100%; border: medium solid #CC3300; width:100%;">
+                    <tr>
+                        <td colspan="5">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style61" colspan="5">
+                            <asp:LinkButton ID="LinkButton21" runat="server" OnClick="LinkButton21_Click" >Personal Info</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton ID="LinkButton22" runat="server" OnClick="LinkButton22_Click" >Refree</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton ID="LinkButton23" runat="server" OnClick="LinkButton23_Click" >Guarantor Form</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style67" colspan="5">
+                            <asp:Label ID="LbEmployeeInfo" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-size: small;" Text="Personal Information"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td colspan="4">
+                            <asp:Label ID="LbSpouseInfo" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" Text="Spouse Infomation (If Married)" style="color: #CC3300; font-size: small; font-style: italic"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbspouseFNam" runat="server" Font-Bold="True" Font-Size="14pt" Text="Spouse First Name" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtSpouseFN" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbSpouseMN" runat="server" Font-Bold="True" Font-Size="14pt" Text="Spouse Middle Name" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtSpouseMN" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbSpousLN" runat="server" Font-Bold="True" Font-Size="14pt" Text="Spouse Last Name" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtSpouceLN" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbSpousePhn" runat="server" Font-Bold="True" Font-Size="14pt" Text="Spouse PhoneNo" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtSpoucePhnNum" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbSpouseEmail" runat="server" Font-Bold="True" Font-Size="14pt" Text="Spouse Email" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtSpouceEmail" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbSpouseAddrs" runat="server" Font-Bold="True" Font-Size="14pt" Text="Spouse Address" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <textarea id="txtSpouseContAddrs" cols="20" name="S9"></textarea></td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbSpouseOccup" runat="server" Font-Bold="True" Font-Size="14pt" Text="Occupation" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtSpouceOccup" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbSpouseEmplo" runat="server" Font-Bold="True" Font-Size="14pt" Text="Spouse Employer" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtSpouseEmployer" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td colspan="4">
+                            <asp:Label ID="LbNxtOfKinInfo" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" Text="Next of Kin Information" style="color: #CC3300; font-style: italic; font-size: medium;"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbnxtOfKinFName" runat="server" Font-Bold="True" Font-Size="14pt" Text="First Name" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNxtOfKinfName" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbnxtOfKinMidName" runat="server" Font-Bold="True" Font-Size="14pt" Text="Middle Name" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNxtOfKinMidName" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="nxtOfKinLNameLabel" runat="server" Font-Bold="True" Font-Size="14pt" Text="Last Name" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNxtOfKinLName" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbNxtOfKinrelationship" runat="server" Font-Bold="True" Font-Size="14pt" Text="Relationship" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNxtOfKinRelationship" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="nxtOfKinphNoLabel" runat="server" Font-Bold="True" Font-Size="14pt" Text="Phone No" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNxtOfKinPhNo" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbnxtOfKinEmail" runat="server" Font-Bold="True" Font-Size="14pt" Text="Email" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNxtOfKinEmail" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="Lboccupation" runat="server" Font-Bold="True" Font-Size="14pt" Text="Occupation" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNxtOfKinOccupation" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbnxtOfKinContAddr" runat="server" Font-Bold="True" Font-Size="14pt" Text="Contact Address" style="font-size: small"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <textarea id="txtNxtOfKinContAdd" runat="server" cols="20" name="S10" rows="1"></textarea></td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td class="auto-style33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td colspan="4">
+                            <asp:Label ID="LbBankInfo" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" Text="Employee Bank Details" style="color: #CC3300; font-style: italic; font-size: medium;"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:Label ID="LbBankName" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: small" Text="Bank Name"></asp:Label>
+                        </td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtBnkName" runat="server" Width="300px"></asp:TextBox>
+                        </td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style72">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style20">&nbsp;</td>
+                        <td class="auto-style22">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <tr>
+                            <td class="auto-style72">&nbsp;</td>
+                            <td class="auto-style20">
+                                <asp:Label ID="LbAcctName0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: small" Text="Account Name"></asp:Label>
+                            </td>
+                            <td class="auto-style20">
+                                <asp:TextBox ID="txtAcctName0" runat="server" Width="300px"></asp:TextBox>
+                            </td>
+                            <td class="auto-style22">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <tr>
+                                <td class="auto-style72">&nbsp;</td>
+                                <td class="auto-style20">&nbsp;</td>
+                                <td class="auto-style20">&nbsp;</td>
+                                <td class="auto-style22">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <tr>
+                                    <td class="auto-style72">&nbsp;</td>
+                                    <td class="auto-style20">
+                                        <asp:Label ID="LbAcctNum0" runat="server" Font-Bold="True" Font-Size="14pt" style="font-size: small" Text="Account Number"></asp:Label>
+                                    </td>
+                                    <td class="auto-style20">
+                                        <asp:TextBox ID="txtAcctNum0" runat="server" Width="300px"></asp:TextBox>
+                                    </td>
+                                    <td class="auto-style22">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style72">&nbsp;</td>
+                                    <td class="auto-style20">&nbsp;</td>
+                                    <td class="auto-style20">
+                                        <asp:Button ID="Button8" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300" Text="Save" />
+                                        &nbsp;<asp:Button ID="btnNextToRefree" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#33CC33" style="color: #CC3300; font-size: medium;" Text="Next" OnClick="btnNextToRefree_Click"  />
+                                    </td>
+                                    <td class="auto-style22">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tr>
+                        </tr>
+                    </tr>
+                    </tr>
+                </table>
+
+            </asp:View>
+    <asp:View ID="RefreeDetails" runat="server">
+
+                <table style="border-style: solid; border-color: #CC3300; width:100%;">
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <asp:LinkButton ID="LinkButton27" runat="server" OnClick="LinkButton27_Click" >Personal Info</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton ID="LinkButton28" runat="server" OnClick="LinkButton28_Click" >Refree</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton ID="LinkButton29" runat="server" OnClick="LinkButton29_Click" >Guarantor Form</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style15">
+                            </td>
+                        <td class="auto-style15"></td>
+                        <td class="auto-style15"></td>
+                        <td class="auto-style15"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="Label47" runat="server" style="color: #CC3300; font-weight: 700; font-size: medium; font-style: italic" Text="Employee Refree Details"></asp:Label>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <table style="width:90%; margin-left:50px">
+                                <tr>
+                                    <td class="auto-style65">&nbsp;</td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td class="auto-style65">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style82"><strong><em>First Refree:</em></strong></td>
+                                    <td>&nbsp;</td>
+                                    <td class="auto-style82"><span class="auto-style82"></span></td>
+                                    <td class="auto-style65"><strong><em>Second Refree:</em></strong></span></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label32" runat="server" style="font-weight: 700" Text="First Name:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox7" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="Label38" runat="server" style="font-weight: 700" Text="First Name:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox14" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label33" runat="server" CssClass="auto-style64" Text="Middle Name:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox8" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="Label39" runat="server" CssClass="auto-style64" Text="Middle Name:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox13" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label34" runat="server" CssClass="auto-style64" Text="Last Name:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox9" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="Label40" runat="server" CssClass="auto-style64" Text="Last Name:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox15" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label35" runat="server" CssClass="auto-style64" Text="Phone No:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox10" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="Label41" runat="server" CssClass="auto-style64" Text="Phone No:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox16" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label36" runat="server" CssClass="auto-style64" Text="Email:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox11" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="Label42" runat="server" CssClass="auto-style64" Text="Email:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox17" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="Label37" runat="server" style="font-weight: 700" Text="Contact Address:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox12" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <asp:Label ID="Label43" runat="server" style="font-weight: 700" Text="Contact Address:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox18" runat="server" Width="150px"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                    <td class="auto-style3"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="Button16" runat="server" style="color: #CC3300; font-weight: 700; font-size: medium" Text="Save" />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <asp:Button ID="Button17" runat="server" OnClick="Button17_Click" style="font-weight: 700; color: #CC3300; font-size: medium" Text="Next" />
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+
+            </asp:View>
+    <asp:View ID="guarantorform" runat="server"
+                >
+                <table style="border-style: solid; border-color: #CC3300; width:100%;">
+                    <tr>
+                        <td class="auto-style1" colspan="4">
+                            <asp:LinkButton ID="LinkButton33" runat="server" OnClick="LinkButton33_Click" >Personal Info</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:LinkButton ID="LinkButton34" runat="server" OnClick="LinkButton2_Click">Refree</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton ID="LinkButton35" runat="server" OnClick="LinkButton3_Click">Guarantor Form</asp:LinkButton>
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style83">
+                            <asp:Label ID="Label44" runat="server" style="color: #CC3300; font-weight: 700; font-size: medium; font-style: italic" Text="Employee Guarantor Form"></asp:Label>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style83">&nbsp;</td>
+                        <td>
+                            <asp:Label ID="Label45" runat="server" style="font-weight: 700" Text="EmployeeID:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList25" runat="server">
+                                <asp:ListItem>---Please Select--</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style83">&nbsp;</td>
+                        <td>
+                            <asp:Label ID="Label127" runat="server" style="font-weight: 700" Text="Guarantor Name (in full):"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox31" runat="server" Width="284px"></asp:TextBox>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style83">&nbsp;</td>
+                        <td>
+                            <asp:Label ID="Label46" runat="server" style="font-weight: 700" Text="Guarantor Form:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:FileUpload ID="FileUpload2" runat="server" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style83">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <asp:Button ID="Button6" runat="server"  style="font-weight: 700; color: #CC3300" Text="Upload" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style84"></td>
+                        <td class="auto-style69"></td>
+                        <td class="auto-style69">
+                            <asp:Button ID="Button7" runat="server" style="font-weight: 700; color: #CC3300; font-size: medium" Text="Save" Width="77px" />
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="Button18" runat="server" OnClick="Button18_Click" style="font-weight: 700; color: #CC3300; font-size: medium" Text="Home" Width="77px" />
+                        </td>
+                        <td class="auto-style69"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style83">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </asp:View>
+    <asp:View ID="ViewQualification" runat="server">
+        <table style="width: 100%; border: medium solid #CC3300; width:100%;">
+             
+            <tr>
+                <td class="auto-style65" colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65" colspan="4">
+                    <asp:Label ID="LbQualifInfo" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic" Text="Qualification Details"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">
+                    <asp:Label ID="LbSchName" runat="server" Font-Bold="True" Text="School Name"></asp:Label>
+                </td>
+                <td class="auto-style7">
+                    <asp:TextBox ID="txtQualifSchName" runat="server" Width="300px"></asp:TextBox>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">
+                    <asp:Label ID="LbCourse" runat="server" Font-Bold="True" Text="Course"></asp:Label>
+                 </td>
+                <td class="auto-style7">
+                    <asp:TextBox ID="txtQualifSchName0" runat="server" Width="300px"></asp:TextBox>
+                 </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">
+                    <asp:Label ID="LbQaulif" runat="server" Font-Bold="True" Text="Qualification"></asp:Label>
+                </td>
+                <td class="auto-style7">
+                    <asp:DropDownList ID="qualifList" runat="server" Width="300px">
+                        <asp:ListItem>---Please Select---</asp:ListItem>
+                        <asp:ListItem>MSc.</asp:ListItem>
+                        <asp:ListItem>PhD</asp:ListItem>
+                        <asp:ListItem>BSc.</asp:ListItem>
+                        <asp:ListItem>BEd</asp:ListItem>
+                        <asp:ListItem>HND</asp:ListItem>
+                        <asp:ListItem>OND</asp:ListItem>
+                        <asp:ListItem>NCE</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">
+                    <asp:Label ID="LbGrade" runat="server" Font-Bold="True" Text="Grade"></asp:Label>
+                </td>
+                <td class="auto-style7">
+                    <asp:DropDownList ID="gradeList" runat="server" Width="300px">
+                        <asp:ListItem>---Please Select---</asp:ListItem>
+                        <asp:ListItem>First Class Upper</asp:ListItem>
+                        <asp:ListItem>Second Class Upper</asp:ListItem>
+                        <asp:ListItem>Second Class Lower</asp:ListItem>
+                        <asp:ListItem>Distinction</asp:ListItem>
+                        <asp:ListItem>Upper Credit </asp:ListItem>
+                        <asp:ListItem>Lower Credit</asp:ListItem>
+                        <asp:ListItem>Third Class</asp:ListItem>
+                        <asp:ListItem>Pass</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style23"></td>
+                <td class="auto-style23">
+                    <asp:Label ID="LbQualifStartYear" runat="server" Font-Bold="True" Text="Start Year"></asp:Label>
+                </td>
+                <td class="auto-style23">
+                    <asp:DropDownList ID="qualifStartYearList" runat="server" Width="300px">
+                        <asp:ListItem></asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style23"></td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;<asp:Label ID="LbQualifEndDate" runat="server" Font-Bold="True" Text="End Year"></asp:Label>
+                    &nbsp; </td>
+                <td class="auto-style7">
+                    <asp:DropDownList ID="qualifEndYearList" runat="server" Width="300px">
+                    </asp:DropDownList>
+                 </td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">
+                    <asp:Button ID="qulifAddBtn" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#33CC33" Text="Add" style="color: #CC3300" OnClick="qulifAddBtn_Click" />
+                    &nbsp;
+                    </td>
+                <td class="auto-style7">
+                    &nbsp; 
+                    <asp:Button ID="qualifBackBtn" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" OnClick="qualifBackBtn_Click" style="color: #CC3300; font-size: medium" Text="Back" />
+                    &nbsp;&nbsp; 
+                    </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style12"></td>
+                <td class="auto-style13"></td>
+                <td class="auto-style14"></td>
+                <td class="auto-style15"></td>
+            </tr>
+            <tr>
+                <td class="auto-style11" colspan="4">
+                    <asp:GridView ID="GViewQualification" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="QualificationID" DataSourceID="SqlDataSource5" EnableModelValidation="True" ForeColor="#333333" GridLines="None" Visible="False">
+                        <AlternatingRowStyle BackColor="White" />
+                        <Columns>
+                            <asp:BoundField DataField="QualificationID" HeaderText="QualificationID" InsertVisible="False" ReadOnly="True" SortExpression="QualificationID" />
+                            <asp:BoundField DataField="QualificationType" HeaderText="QualificationType" SortExpression="QualificationType" />
+                            <asp:BoundField DataField="Course" HeaderText="Course" SortExpression="Course" />
+                            <asp:BoundField DataField="StartYear" HeaderText="StartYear" SortExpression="StartYear" />
+                            <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+                            <asp:BoundField DataField="EndYear" HeaderText="EndYear" SortExpression="EndYear" />
+                            <asp:BoundField DataField="InstitutionName" HeaderText="InstitutionName" SortExpression="InstitutionName" />
+                        </Columns>
+                        <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                        <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:SiteSqlServer %>" SelectCommand="SELECT [QualificationID], [QualificationType], [Course], [StartYear], [Grade], [EndYear], [InstitutionName] FROM [ApplicantQualification]"></asp:SqlDataSource>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style65">&nbsp;</td>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style7">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            
+        </table>
+    </asp:View>
+    <asp:View ID="ViewCertification" runat="server">
+         <table style="width: 100%; border: medium solid #CC0066; width:100%;">
+            <tr>
+                <td class="auto-style16">&nbsp;</td>
+                <td class="auto-style67">
+                    &nbsp;</td>
+                <td class="auto-style18">
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                 <td class="auto-style16" colspan="4">
+                     <asp:Label ID="LbCertifcation" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic" Text="Professional Certification"></asp:Label>
+                 </td>
+             </tr>
+             <tr>
+                 <td class="auto-style16" colspan="4">
+                     <table style="width: 80%; margin-left: 100px;">
+                         <tr>
+                             <td>
+                                 <asp:Label ID="LbCertName" runat="server" Font-Bold="True" Text="Name"></asp:Label>
+                             </td>
+                             <td>
+                                 <asp:TextBox ID="txtCertName0" runat="server" Width="300px"></asp:TextBox>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 <asp:Label ID="LbStage" runat="server" Font-Bold="True" Text="Stage"></asp:Label>
+                             </td>
+                             <td>
+                                 <asp:DropDownList ID="certStageList" runat="server" Width="300px">
+                                 </asp:DropDownList>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 <asp:Label ID="LbCertNo" runat="server" Font-Bold="True" Text="Certificate Num"></asp:Label>
+                             </td>
+                             <td>
+                                 <asp:TextBox ID="txtCertNum" runat="server" Width="300px"></asp:TextBox>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 <asp:Label ID="LbCertYear" runat="server" Font-Bold="True" Text="Year"></asp:Label>
+                             </td>
+                             <td>
+                                 <asp:DropDownList ID="certYearList" runat="server" Width="300px">
+                                 </asp:DropDownList>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>&nbsp;</td>
+                             <td>
+                                 <asp:Button ID="certAddBtn" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#33CC33" OnClick="certAddBtn_Click" Text="Add" style="color: #CC3300" />
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 <asp:Button ID="ProfCertBack" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" style="color: #CC3300; font-size: medium" Text="Back" />
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>
+                                 &nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>
+                     </table>
+                 </td>
+             </tr>
+            <tr>
+                <td class="auto-style16">
+                    &nbsp;</td>
+                <td class="auto-style67">&nbsp;</td>
+                <td class="auto-style18">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <asp:GridView ID="GViewCert" runat="server" AutoGenerateColumns="False" CellPadding="4" EnableModelValidation="True" ForeColor="#333333" GridLines="None" Visible="False">
+                        <AlternatingRowStyle BackColor="White" />
+                        <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                        <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                    </asp:GridView>
+                    <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:SiteSqlServer %>" SelectCommand="SELECT [ProfQualificationID], [CertificationName], [CertificateNo], [Stage], [Year] FROM [ApplicantProfQualification]"></asp:SqlDataSource>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style16">&nbsp;</td>
+                <td class="auto-style67">&nbsp;</td>
+                <td class="auto-style18">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style16">&nbsp;</td>
+                <td class="auto-style67">&nbsp;</td>
+                <td class="auto-style18">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                 <td class="auto-style16">&nbsp;</td>
+                 <td class="auto-style67">&nbsp;</td>
+                 <td class="auto-style18">&nbsp;</td>
+                 <td>&nbsp;</td>
+             </tr>
+        </table>
+    </asp:View>
+    <asp:View ID="ViewOtherDocuments" runat="server">
+         <table style="width: 100%; border: medium solid #CC3300; width:100%;">
+            <tr>
+                <td colspan="4">
+                    &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                </td>
+               
+            </tr>
+            <tr>
+                <td colspan="4">
+                    &nbsp;</td>
+            </tr>
+             <tr>
+                 <td colspan="4">
+                     <asp:Label ID="LbOtherDocm" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic" Text="Other Document"></asp:Label>
+                 </td>
+             </tr>
+            <tr>
+                <td class="auto-style75">&nbsp;</td>
+                <td class="auto-style14">
+                    <asp:Label ID="LbDocName" runat="server" Font-Bold="True" Text="Document Type"></asp:Label>
+                </td>
+                <td>
+                    <asp:DropDownList ID="DropDownList13" runat="server" Width="300px">
+                        <asp:ListItem>--Please Select---</asp:ListItem>
+                        <asp:ListItem>Degree Cert</asp:ListItem>
+                        <asp:ListItem>O&#39;Level</asp:ListItem>
+                        <asp:ListItem>NYSC</asp:ListItem>
+                        <asp:ListItem>Other Cert</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style75">&nbsp;</td>
+                <td class="auto-style14">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style75">&nbsp;</td>
+                <td class="auto-style14">
+                    <asp:Label ID="LbDocFile0" runat="server" Font-Bold="True" Text="File"></asp:Label>
+                </td>
+                <td>
+                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style75">&nbsp;</td>
+                <td class="auto-style14">&nbsp;</td>
+                <td>
+                    <asp:Button ID="docUploadBtn" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#33CC33" style="color: #CC3300; font-size: small;" Text="Upload" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style75">&nbsp;</td>
+                <td class="auto-style14">&nbsp;</td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="docSaveBtn" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#33CC33" Text="Add" style="color: #CC3300" />
+                    &nbsp;&nbsp;&nbsp;<asp:Button ID="docNextBtn" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#33CC33" OnClick="docNextBtn_Click" Text="Next" style="color: #CC3300" />
+                    &nbsp;
+                    <asp:Button ID="docBackBtn" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#33CC33" OnClick="docBackBtn_Click" Text="Back" style="color: #CC3300" />
+                    &nbsp;&nbsp; </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style75">
+                    &nbsp;</td>
+                <td class="auto-style14">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style74" colspan="4">
+                    <asp:GridView ID="GViewDoc" runat="server" OnSelectedIndexChanged="GViewDoc_SelectedIndexChanged">
+                    </asp:GridView>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style75">
+                    &nbsp;</td>
+                <td class="auto-style14">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                 <td class="auto-style75">&nbsp;</td>
+                 <td class="auto-style14">&nbsp;</td>
+                 <td>&nbsp;</td>
+                 <td>&nbsp;</td>
+             </tr>
+        </table>
+    </asp:View>
+    
+   <asp:View ID="ViewQuery" runat="server">
+    <table style="border: medium solid #CC3300; width:100%;">
+        <tr>
+            <td colspan="5">
+                <asp:Label ID="LbQuery" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300" Text="Query Management"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style79">
+                &nbsp;</td>
+            <td class="auto-style11">
+                <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="EmployeeID"></asp:Label>
+            </td>
+            <td class="auto-style78">
+                <asp:DropDownList ID="queryEmployeeList" runat="server">
+                    <asp:ListItem>---Please Select---</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+            <td class="auto-style11">
+                <asp:Label ID="LbQueyType" runat="server" Font-Bold="True" Text="Query Type"></asp:Label>
+            </td>
+            <td class="auto-style11">
+                <asp:Label ID="Label113" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300" Text="Label"></asp:Label>
+            </td>
+        </tr>
+
+         <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style79">
+                &nbsp;</td>
+            <td>
+                <asp:Label ID="LbQueryDesc" runat="server" Font-Bold="True" Text="Query Description"></asp:Label>
+            </td>
+            <td class="auto-style78">
+                <asp:Label ID="Label114" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300" Text="Label"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="LbReason0" runat="server" Font-Bold="True" Text="Reason"></asp:Label>
+            </td>
+            <td>
+                <asp:Label ID="Label115" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300" Text="Label"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style80"></td>
+            <td class="auto-style15">
+                <asp:Label ID="LbIssueBy0" runat="server" Font-Bold="True" Text="IssueBy"></asp:Label>
+            </td>
+            <td class="auto-style81">
+                <asp:Label ID="Label116" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300" Text="Label"></asp:Label>
+            </td>
+            <td class="auto-style15">
+                <asp:Label ID="LbIssueDate0" runat="server" Font-Bold="True" Text="Issue Date"></asp:Label>
+            </td>
+            <td class="auto-style15">
+                <asp:Label ID="Label117" runat="server" style="font-weight: 700; font-size: medium; color: #CC3300" Text="Label"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="auto-style79">
+                &nbsp;</td>
+            <td>
+                <asp:Label ID="LbEmpResponse3" runat="server" Font-Bold="True" Text="Employee Response"></asp:Label>
+            </td>
+            <td class="auto-style78">
+                <asp:TextBox ID="TextBox29" runat="server" Height="58px" Width="218px"></asp:TextBox>
+            </td>
+            <td>
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+         <tr>
+             <td class="auto-style79">&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="auto-style78">&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>
+                <asp:Label ID="LbEmpResponse0" runat="server" Font-Bold="True" Text="Response Date"></asp:Label>
+            </td>
+            <td class="auto-style78">
+                <asp:TextBox ID="TextBox23" runat="server"></asp:TextBox>
+                <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/images/calendar.png" Width="16px" />
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td class="auto-style78">
+                <asp:Button ID="issueQueryBtn0" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" style="color: #CC3300" Text="Submit" />
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style79">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style78">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</asp:View>
+<asp:View ID="ViewLeave" runat="server">
+    <table style="width: 100%; border: medium solid #CC3300; width:100%;">
+        <tr>
+            <td class="auto-style76" colspan="4">
+                <asp:Label ID="LbLeaveManagement0" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300" Text="Leave Management"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style86">&nbsp;</td>
+            <td class="auto-style87"></td>
+            <td class="auto-style87"></td>
+            <td class="auto-style87"></td>
+        </tr>
+        <tr>
+            <td class="auto-style86">&nbsp;</td>
+            <td class="auto-style87" colspan="2">
+                <asp:Label ID="Label126" runat="server" style="font-style: italic; font-weight: 700; color: #CC3300" Text="Fill in the required details "></asp:Label>
+            </td>
+            <td class="auto-style87">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">
+                &nbsp;</td>
+            <td>
+                <asp:Label ID="LbLeaveEmployeeID" runat="server" Font-Bold="True" Text="EmployeeID"></asp:Label>
+            </td>
+            <td>
+                <asp:DropDownList ID="LeaveEmployeeList" runat="server">
+                    <asp:ListItem>---Please Select---</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">
+                &nbsp;</td>
+            <td>
+                <asp:Label ID="LbLeaveType" runat="server" Font-Bold="True" Text="Leave Type"></asp:Label>
+            </td>
+            <td>
+                <asp:DropDownList ID="leaveTypeList" runat="server">
+                    <asp:ListItem Value="---Please Select---"></asp:ListItem>
+                    <asp:ListItem>Study Leave</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>
+                <asp:Label ID="LbLeaveDesc0" runat="server" Font-Bold="True" Text="Leave Description"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtLeaveDesc" runat="server" Height="56px" Width="324px"></asp:TextBox>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="auto-style76">
+                </td>
+            <td class="auto-style15">
+                <asp:Label ID="LbLeaveStartDate" runat="server" Font-Bold="True" Text="Start Date"></asp:Label>
+             </td>
+            <td class="auto-style15">
+                <asp:TextBox ID="TextBox19" runat="server"></asp:TextBox>
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="16px" ImageUrl="~/images/calendar.png"  Width="16px" />
+             </td>
+            <td class="auto-style15">
+                </td>
+        </tr>
+        <tr>
+            <td class="auto-style75"></td>
+            <td class="auto-style3"></td>
+            <td class="auto-style3"></td>
+            <td class="auto-style3"></td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>
+                <asp:Label ID="LbLeaveEndDate" runat="server" Font-Bold="True" Text="End Date"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="TextBox20" runat="server"></asp:TextBox>
+                <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/images/calendar.png"  />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">
+                &nbsp;</td>
+            <td>
+                <asp:Label ID="LbLeaveDurtion" runat="server" Font-Bold="True" Text="Duration"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtLeaveDuration" runat="server"></asp:TextBox>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+
+         <tr>
+             <td class="auto-style76">&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>
+                <asp:Label ID="LbLeaveDurtion0" runat="server" Font-Bold="True" Text="Applied Date"></asp:Label>
+             </td>
+            <td>
+                <asp:TextBox ID="TextBox30" runat="server"></asp:TextBox>
+                <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/images/calendar.png"  />
+             </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>
+                <asp:Button ID="grantLeaveBtn" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" Text="Apply" style="color: #CC3300" />
+            </td>
+            <td>
+                <asp:Button ID="leaveNextBtn" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" Text="Next" style="color: #CC3300" />
+                &nbsp;
+                <asp:Button ID="leaveBack" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" Text="Back"  style="color: #CC3300" />
+                &nbsp;<asp:Button ID="leaveHomePage" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33"  style="color: #CC3300" Text="Home" />
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style76">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</asp:View>
+<asp:View ID="ViewSelfAppraisal" runat="server">
+         <table style="width: 100%; border: medium solid #CC3300; width:100%;">
+        <tr>
+            <td class="auto-style3" colspan="5">
+                &nbsp;</td>
+        </tr>
+             <tr>
+                 <td class="auto-style3" colspan="5"><strong>
+                     <asp:Label ID="LbAppraisal" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300" Text="Performance Appraisal Management"></asp:Label>
+                     </strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+        <tr>
+            <td class="auto-style94">
+                <strong></strong>
+            </td>
+            <td class="auto-style96">
+                <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="LbfstName" runat="server" Font-Bold="True" Text="First Name"></asp:Label>
+                </strong>
+            </td>
+            <td class="auto-style3">
+                <strong>
+                <asp:Label ID="LbFirstName" runat="server" Font-Bold="True" ForeColor="#FF6666">Label</asp:Label>
+                </strong>
+            </td>
+            <td class="auto-style37">
+                <strong>
+                <asp:Label ID="LbEmpMidName" runat="server" Font-Bold="True" Text="Middle Name"></asp:Label>
+                </strong>
+            </td>
+            <td class="auto-style3"><strong>
+                <asp:Label ID="LbMiddleName" runat="server" Font-Bold="True" ForeColor="#FF6666">Label</asp:Label>
+                </strong></td>
+        </tr>
+
+        <tr>
+            <td class="auto-style95"></td>
+            <td class="auto-style97"></td>
+            <td class="auto-style15"></td>
+            <td class="auto-style40"></td>
+
+            <td class="auto-style15"></td>
+
+        </tr>
+             <tr>
+                 <td class="auto-style94">
+                     <strong></strong>
+                 </td>
+                 <td class="auto-style96">
+                     <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <asp:Label ID="LbLtName" runat="server" Font-Bold="True" Text="Last Name"></asp:Label>
+                     &nbsp;</strong></td>
+                 <td class="auto-style3">
+                     <strong>
+                     <asp:Label ID="LbLastName" runat="server" Font-Bold="True" ForeColor="#FF6666">Label</asp:Label>
+                     </strong>
+                 </td>
+                 <td class="auto-style37">
+                     <strong>
+                     <asp:Label ID="LlbDept" runat="server" Font-Bold="True" Text="Department"></asp:Label>
+                     </strong>
+                 </td>
+                 <td class="auto-style3"><strong>
+                     <asp:Label ID="LbEmpDept" runat="server" Font-Bold="True" ForeColor="#FF6666">Label</asp:Label>
+                     </strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+        <tr>
+            <td class="auto-style94">
+                <strong></strong>
+            </td>
+            <td class="auto-style96">
+                <strong>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="LbPost" runat="server" Font-Bold="True" Text="Position"></asp:Label>
+                </strong>
+            </td>
+            <td class="auto-style3">
+                <strong>
+                <asp:Label ID="LbEmpDept0" runat="server" Font-Bold="True" ForeColor="#FF6666">Label</asp:Label>
+                </strong>
+            </td>
+            <td class="auto-style37">
+                <strong>
+                <asp:Label ID="LbEvaluationPeriod0" runat="server" Font-Bold="True" Text="Evaluation Period"></asp:Label>
+                </strong>
+            </td>
+            <td class="auto-style3"><strong>
+                <asp:DropDownList ID="evaluationPeriodList0" runat="server">
+                </asp:DropDownList>
+                </strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style95"><strong></strong></td>
+            <td class="auto-style97"><strong></strong></td>
+            <td class="auto-style15"><strong></strong></td>
+            <td class="auto-style40"></td>
+            <td class="auto-style15"></td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                <strong></strong>
+            </td>
+            <td class="auto-style96">
+                <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label26" runat="server" Font-Bold="True" Text="Supervisor Name"></asp:Label>
+                &nbsp;</strong></td>
+            <td>
+                <strong>
+                <asp:TextBox ID="txtSupervisorName1" runat="server"></asp:TextBox>
+                </strong>
+            </td>
+            <td class="auto-style37">
+                <strong>
+                <asp:Label ID="Label27" runat="server" Font-Bold="True" Text="Start Year of Service"></asp:Label>
+                </strong>
+            </td>
+            <td class="auto-style3"><strong>
+                <asp:DropDownList ID="DropDownList14" runat="server">
+                </asp:DropDownList>
+                </strong></td>
+        </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94">
+                     <strong></strong>
+                 </td>
+                 <td class="auto-style43" colspan="4"><strong>
+                     <asp:Label ID="LbSelfAppraisal" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic" Text="Self Appraisal"></asp:Label>
+                     </strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94">
+                     <strong></strong>
+                 </td>
+                 <td class="auto-style96">
+                     <strong>
+                     <asp:Label ID="Label28" runat="server" Font-Bold="True" Text="In what areas do I excel in the performance of my duties?"></asp:Label>
+                     </strong></td>
+                 <td colspan="2"><strong>
+                     <textarea id="txtExcelPerformance" name="S5"></textarea></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94">
+                     <strong></strong>
+                 </td>
+                 <td class="auto-style96">
+                     <strong>
+                     <asp:Label ID="Label29" runat="server" Font-Bold="True" Text="In what areas do I need improvement in the performance of my duties?"></asp:Label>
+                     </strong></td>
+                 <td colspan="2"><strong>
+                     <textarea id="txtExcelPerformance0" cols="20" name="S11" rows="1"></textarea></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94">
+                     <strong></strong>
+                 </td>
+                 <td class="auto-style96">
+                     <strong>
+                     <asp:Label ID="Label30" runat="server" Font-Bold="True" Text="What steps can I take to improve my work performance?"></asp:Label>
+                     </strong></td>
+                 <td colspan="2"><strong>
+                     <textarea id="txtExcelPerformance1" cols="20" name="S12" rows="1"></textarea></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94">
+                     <strong></strong>
+                 </td>
+                 <td class="auto-style96">
+                     <strong>
+                     <asp:Label ID="Label31" runat="server" Font-Bold="True" Text="What assistance could my supervisor provide to help me improve my work performance? "></asp:Label>
+                     </strong></td>
+                 <td colspan="2"><strong>
+                     <textarea id="txtExcelPerformance2" cols="20" name="S13" rows="1"></textarea></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+        <tr>
+            <td class="auto-style94" colspan="5">
+                <strong>
+                <asp:Label ID="LbAppraisal0" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="font-style: italic; color: #CC3300; font-size: small" Text="Please read this information carefully before you proceed"></asp:Label>
+                </strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94"><strong></strong></td>
+            <td class="auto-style96" colspan="3"><strong>
+                <asp:Label ID="LbAppraisal1" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="font-style: italic; color: #CC3300" Text="Competency Factor Definitions"></asp:Label>
+                </strong></td>
+            <td class="auto-style3"><strong></strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                <strong></strong>
+               
+            </td>
+            <td colspan="4">
+                <ul>
+                    <li><strong><span class="auto-style99">QUALITY OF WORK:</span></strong> <span class="auto-style99">Work quality refers to effort that consistently achieves desired outcomes with a minimum of avoidable.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li><strong><span class="auto-style99">PRODUCTIVITY: </span></strong><span class="auto-style99">Consider how the person uses available working time, plans and prioritizes work, sets and accomplishes.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">KNOWLEDGE OF THE JOB:</span></strong> <span class="auto-style99">Does the employee exhibit job-related knowledge and skill needed to perform the duties and requirements of the position? Does the employee exhibit knowledge of the methods, practices and equipment needed to do the job? Consider knowledge gained through experience, education, and specialized training. Does the employee seek to maintain current knowledge of changes in policies and procedures? Does the employee keep abreast of new developments and major issues in the field? At times, employee may be consulted by others for guidance.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">ADAPTABILITY:</span></strong><span class="auto-style99"> How does this employee adjust to changes? Does this employee initiate or recommend beneficial changes in work procedures? Does this employee readily accept new assignments or temporary assignments outside the regular responsibilities? Consider willingness to learn quickly, to adapt to changes in job assignments, methods, personnel, or surroundings.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li><strong><span class="auto-style99">DEPENDABILITY: </span></strong><span class="auto-style99">How reliable is the employee in performing work assignments and carrying out instructions? Consider the degree of supervision required and the willingness to take on responsibilities and to be accountable for them.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">INITIATIVE AND RESOURCEFULNESS: </span></strong><span class="auto-style99">Does the employee see things to be done and then take appropriate action without being so directed? Consider ability to contribute, develop and/or carry out new ideas or methods. Consider ability to be a selfstarter, to be creative, to offer suggestions, to anticipate needs and to seek additional tasks and projects to complete as timepermits.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">JUDGEMENT AND POLICY COMPLIANCE: </span></strong><span class="auto-style99">Does employee evaluate situations and make sound decisions, and use reasoning to identify, solve, and prevent problems? Does the employee work in a safe manner, preventing accidents, injuries, andtheft? Does the employee exhibit knowledge of the University’s policies and procedures applicable to his/her assignment? Does the employee exhibit willingness to comply with all reasonable requirements?</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">INTERPERSONAL RELATIONS AND CUSTOMER SERVICE:</span></strong><span class="auto-style99">Does the employee exhibit a good level of interpersonal skills and have a good working relationship with most of his/her peers, subordinates, supervisors, customers, and the general public? Consider respect and courtesy the employee shows to others, how the employee’s behavior affects the work area, and the willingness of the employee to accept supervision. Does the employee exhibit appropriate supportive behavior toward the University and its customers? Is the employee unnecessarily involved in trivial disputes and misunderstandings? Does the employee exhibit willingness to work as a team member?</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">ATTENDANCE AND PUNCTUALITY: </span></strong><span class="auto-style99">Does the employee report to work on a timely basis and stay on the job? Consider arrival times, observance of time limits for breaks and lunches. Consider patterns of sick leave use, seeking prior approval for vacation, and giving prompt notice to supervisor of absence due to illness or other acceptable reasons.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">TEAM WORK: </span></strong><span class="auto-style99">Does the employee exhibit willingness and ability to work as a team member? Does the employee respond to suggestions and criticism with minimal defensiveness? Consider whether the employee keeps the supervisor and others advised of problems or practical ideas when needed. Consider adherence to the guidelines and regulations that are utilized by the work group, and assisting others on assignments and projects contributing to their success.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">COMMUNICATION SKILLS: </span></strong><span class="auto-style99">To what extent does the employee demonstrate ability to communicate effectively in both oral and written expression with other employees and his/her supervisor? Are issues confronted and resolved constructively? Consider ability to help others with their work problems, and ability to keep others informed of decisions and plans for their own offices as well as policies and procedures of the University.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li class="auto-style98"><strong><span class="auto-style99">PLANNING AND ORGANIZATION:</span></strong><span class="auto-style99"> How effective is the employee in setting effective goals, planning ahead and establishing priorities? Consider ability to make the most effective use of time, facilities, material, equipment, skills and other resources. Examine ability to prepare and administer budget effectively.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li><strong><span class="auto-style99">LEADERSHIP ABILITY:</span></strong><span class="auto-style99"> Is the employee able to get other employees to do willingly and well the duties needed to be accomplished? Consider ability to get the work done while being sensitive to the morale and satisfaction of those doing the work; the ability to function consistently and effectively in an objective and rational manner regardless of pressures.</span></li>
+                </ul>
+                <p>
+                    &nbsp;</p>
+                <ul>
+                    <li><strong><span class="auto-style99">APPRAISAL AND DEVELOPMENT OF PEOPLE: </span></strong><span class="auto-style99">Does the supervisor demonstrate ability to select, train and provide opportunities for development of employees by recognizing and facilitating improvement of their abilities? Consider ability to exhibit fairness and impartiality with employees in assigning job duties and objectively appraising work performance.</span></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94"><strong></strong></td>
+            <td class="auto-style96"><strong></strong></td>
+            <td><strong></strong></td>
+            <td class="auto-style37"><strong></strong></td>
+            <td class="auto-style3"><strong></strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                &nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+             <tr>
+                 <td class="auto-style94"><strong></strong></td>
+                 <td class="auto-style96"><strong></strong></td>
+                 <td><strong></strong></td>
+                 <td class="auto-style37"><strong></strong></td>
+                 <td class="auto-style3"><strong></strong></td>
+             </tr>
+        <tr>
+            <td class="auto-style94"><strong></strong></td>
+            <td class="auto-style96" colspan="4"><strong>
+                <asp:Label ID="LbConpetency" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic; font-size: small" Text="You can now rate your self below"></asp:Label>
+                </strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                <strong></strong>
+            </td>
+            <td colspan="4">
+                <table style="width:100%;">
+                    <tr>
+                        <td class="auto-style46"></td>
+                        <td class="auto-style47">&nbsp;<strong><asp:Label ID="LbPreformance" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#CC0066" style="color: #CC3300" Text="Performance Factors"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style35">&nbsp;<strong><asp:Label ID="LbPreformanceRatingKey" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#CC0066" style="color: #CC3300" Text="Rating Key"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style36"><strong>
+                            <asp:Label ID="LbPreformancePoint" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#CC0066" style="color: #CC3300" Text="Point"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbQuality" runat="server" Font-Bold="True" Text="Quality of Work"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ratingKey1_SelectedIndexChanged">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                                <asp:ListItem>Consistently exceeds expectations</asp:ListItem>
+                                <asp:ListItem>Often exceeds expectations</asp:ListItem>
+                                <asp:ListItem>Meets expectations</asp:ListItem>
+                                <asp:ListItem>Some improvement needed</asp:ListItem>
+                                <asp:ListItem Value="Major improvement needed">Major improvement needed</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint1" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbProductivity" runat="server" Font-Bold="True" Text="Productivity"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey2" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint2" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbKnowledge" runat="server" Font-Bold="True" Text="Knowledge of the Job"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey3" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint3" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbAdability" runat="server" Font-Bold="True" Text="Adaptability"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey4" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint4" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbDependability" runat="server" Font-Bold="True" Text="Dependability"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey5" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint5" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbInitiative" runat="server" Font-Bold="True" Text="Initiative &amp; Resourcefulness"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey6" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint6" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbPolicyCompliance" runat="server" Font-Bold="True" Text="Judgment &amp; Policy Compliance"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey7" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint7" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbInterpersonal" runat="server" Font-Bold="True" Text="Interpersonal Relations &amp; Customer Service"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey8" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint8" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbAttendance" runat="server" Font-Bold="True" Text="Attendance &amp; Punctuality"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey9" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint9" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbTeam" runat="server" Font-Bold="True" Text="Team Work"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey10" runat="server" Width="229px">
+                                <asp:ListItem Value="---Please Select---"></asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint10" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbCommunication" runat="server" Font-Bold="True" Text="Communication Skills"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey11" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint11" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbPlanning" runat="server" Font-Bold="True" Text="Planning &amp; Organization"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey12" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint12" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbLeadership" runat="server" Font-Bold="True" Text="Leadership Ability"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey13" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint13" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbDevelopment" runat="server" Font-Bold="True" Text="Appraisal &amp; Development of People"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:DropDownList ID="ratingKey14" runat="server" Width="229px">
+                                <asp:ListItem>---Please Select---</asp:ListItem>
+                            </asp:DropDownList>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint14" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong></strong></td>
+                        <td class="auto-style45"><strong></strong></td>
+                        <td class="auto-style39"><strong></strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style46"><strong></strong></td>
+                        <td class="auto-style47"><strong>
+                            <asp:Label ID="LbPoint" runat="server" Font-Bold="True" Text="Overall Rating/ Total Points"></asp:Label>
+                            </strong></td>
+                        <td class="auto-style45"><strong>
+                            <asp:TextBox ID="txtOverallRating" runat="server" Width="227px"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style39"><strong>
+                            <asp:TextBox ID="txtratingPoint15" runat="server"></asp:TextBox>
+                            </strong></td>
+                        <td class="auto-style3"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94"><strong></strong></td>
+            <td class="auto-style96"><strong></strong></td>
+            <td><strong></strong></td>
+            <td class="auto-style37"><strong></strong></td>
+            <td class="auto-style3"><strong></strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                <strong></strong>
+            </td>
+            <td class="auto-style96"><strong>
+                <asp:Label ID="LbConpetency0" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300" Text="Performance Goal"></asp:Label>
+                </strong></td>
+            <td><strong></strong></td>
+            <td class="auto-style37"><strong></strong></td>
+            <td class="auto-style3"><strong></strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style94"><strong></strong> </td>
+            <td colspan="4"><em><strong>Employees should develop and suggest goals for the supervisor and employee to discuss. Both the supervisor and employee should agree on the goals. Goals may be work-related or developmental; the goal should be limited to a one-year time frame. Enter the goals in order of importance. The following questions will assist the employee and supervisor:</strong></em><strong><br /> </strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td colspan="4">&nbsp;<ol>
+                <li>What specific tasks, projects, or activities need to be accomplished? </li>
+                <li>What changes in work performance are required or desired?</li>
+                <li>What training or work experience would be helpful or developmental?</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                &nbsp;</td>
+            <td colspan="4">
+                <asp:Label ID="LbPre" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="color: #CC3300; font-style: italic" Text="Previous Year Goal- to be Reviewed for Current Performance Appraisal  "></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td colspan="4">
+                <table style="width:100%;">
+                    <tr>
+                        <td class="auto-style23"></td>
+                        <td class="auto-style25">
+                            <asp:Label ID="LbGoalDesc1" runat="server" Font-Bold="True" Text="Goal Description"></asp:Label>
+                        </td>
+                        <td class="auto-style29">
+                            <textarea id="txtPreYearGoalDesc" cols="20" name="S2" rows="2"></textarea></td>
+                        <td class="auto-style22"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">
+                            <asp:Label ID="LbGoalDesc2" runat="server" Font-Bold="True" Text="Objective: Describe how the Goal was achieved"></asp:Label>
+                        </td>
+                        <td class="auto-style30">
+                            <textarea id="txtPreYearGoalObjective" cols="20" name="S3" rows="2"></textarea></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">
+                            <asp:Label ID="LbGoalEvaluationPoint" runat="server" Font-Bold="True" Text="Evaluation Point"></asp:Label>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:TextBox ID="txtPreYearEvaluationPoint" runat="server"></asp:TextBox>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">
+                            <asp:Label ID="LbCompDate" runat="server" Font-Bold="True" Text="Completion Date"></asp:Label>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:TextBox ID="TextBox32" runat="server"></asp:TextBox>
+                            <asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/images/calendar.png" OnClick="ImageButton7_Click" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">
+                            <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Visible="False" Width="200px">
+                                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+                                <NextPrevStyle VerticalAlign="Bottom" />
+                                <OtherMonthDayStyle ForeColor="#808080" />
+                                <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+                                <SelectorStyle BackColor="#CCCCCC" />
+                                <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+                                <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                <WeekendDayStyle BackColor="#FFFFCC" />
+                            </asp:Calendar>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                &nbsp;</td>
+            <td colspan="4">
+                <asp:Label ID="LbPre0" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" style="font-style: italic; color: #CC3300" Text="Next Year Goal- to be Reviewed at Next Year's  Performance Appraisal  "></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                &nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td colspan="4">&nbsp;
+                <table style="width:100%;">
+                    <tr>
+                        <td class="auto-style23"></td>
+                        <td class="auto-style25">
+                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Goal Description"></asp:Label>
+                        </td>
+                        <td class="auto-style29">
+                            <textarea id="txtNxtYearGoalDesc" cols="20" name="S2" rows="2"></textarea></td>
+                        <td class="auto-style22"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">
+                            <asp:Label ID="Label8" runat="server" Font-Bold="True" Text="Objective: Describe how the Goal was achieved"></asp:Label>
+                        </td>
+                        <td class="auto-style30">
+                            <textarea id="txtNxtYearGoalObjective" cols="20" name="S3" rows="2"></textarea></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">
+                            <asp:Label ID="LbGoalEvaluationPoint0" runat="server" Font-Bold="True" Text="Evaluation Point"></asp:Label>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:TextBox ID="txtNextYearEvaluationPoint0" runat="server"></asp:TextBox>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">
+                            <asp:Label ID="Label11" runat="server" Font-Bold="True" Text="Completion Date"></asp:Label>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:TextBox ID="TextBox33" runat="server"></asp:TextBox>
+                            <asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/images/calendar.png" OnClick="ImageButton8_Click" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">
+                            <asp:Calendar ID="nxtYearCompletionDateCalendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Visible="False" Width="200px">
+                                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+                                <NextPrevStyle VerticalAlign="Bottom" />
+                                <OtherMonthDayStyle ForeColor="#808080" />
+                                <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+                                <SelectorStyle BackColor="#CCCCCC" />
+                                <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+                                <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                <WeekendDayStyle BackColor="#FFFFCC" />
+                            </asp:Calendar>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">&nbsp;</td>
+                        <td class="auto-style32">&nbsp;</td>
+                        <td class="auto-style30">
+                            <asp:Button ID="appraisalBtn0" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" style="color: #CC3300" Text="Appraise" />
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="Button19" runat="server" OnClick="Button19_Click" style="color: #CC3300; font-weight: 700; font-size: small" Text="Home" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style94">
+                &nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td class="auto-style37">
+                &nbsp; &nbsp; </td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style94">&nbsp;</td>
+            <td class="auto-style96">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="auto-style37">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+    </table>
+    </asp:View>
+</asp:MultiView>
+
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td colspan="2">
+            <asp:LinkButton ID="LinkButton36" runat="server" OnClick="LinkButton36_Click">Home</asp:LinkButton>
+&nbsp;
+            <asp:LinkButton ID="LinkButton37" runat="server" OnClick="LinkButton37_Click">View Profile</asp:LinkButton>
+&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton38" runat="server" OnClick="LinkButton38_Click">Update Profile</asp:LinkButton>
+&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton39" runat="server" OnClick="LinkButton39_Click">Qualification</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton40" runat="server" OnClick="LinkButton40_Click">Professional Qualification</asp:LinkButton>
+&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton41" runat="server" OnClick="LinkButton41_Click">Documents</asp:LinkButton>
+&nbsp;
+            <asp:LinkButton ID="LinkButton42" runat="server" OnClick="LinkButton42_Click">Query</asp:LinkButton>
+&nbsp;&nbsp;<asp:LinkButton ID="LinkButton44" runat="server" OnClick="LinkButton44_Click">Leave</asp:LinkButton>
+&nbsp;
+            <asp:LinkButton ID="LinkButton43" runat="server" OnClick="LinkButton43_Click">Apprasial</asp:LinkButton>
+&nbsp;
+            &nbsp;<asp:LinkButton ID="LinkButton45" runat="server" OnClick="LinkButton45_Click">Retirement</asp:LinkButton>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+

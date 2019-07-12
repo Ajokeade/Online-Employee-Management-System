@@ -1,0 +1,108 @@
+2018-09-18 10:51:29,554 [DESKTOP-K8AQEJ2][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeQueryTableUpdateQueryResponse' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeQueryTableUpdateQueryResponse(Int32 queryID, String employeeResponse, String responseDate, String empResponseLetter) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1367
+   at Bilikis.HRManagementSystem.EmployeeQueryTableController.UpdateQueryResponse(EmployeeQueryTableInfo objEmployeeQueryTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1674
+   at Bilikis.HRManagementSystem.EmployeePage.btnSendQueryResponse_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1594
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-18 10:51:29,887 [DESKTOP-K8AQEJ2][Thread:5][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=90&error=An unexpected error has occurred&content=0
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeQueryTableUpdateQueryResponse' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeQueryTableUpdateQueryResponse(Int32 queryID, String employeeResponse, String responseDate, String empResponseLetter) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1367
+   at Bilikis.HRManagementSystem.EmployeeQueryTableController.UpdateQueryResponse(EmployeeQueryTableInfo objEmployeeQueryTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1674
+   at Bilikis.HRManagementSystem.EmployeePage.btnSendQueryResponse_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1594
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-18 11:16:29,448 [DESKTOP-K8AQEJ2][Thread:5][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeQueryTableUpdateQueryResponse' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeQueryTableUpdateQueryResponse(Int32 queryID, String employeeResponse, String responseDate, String empResponseLetter) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1367
+   at Bilikis.HRManagementSystem.EmployeeQueryTableController.UpdateQueryResponse(EmployeeQueryTableInfo objEmployeeQueryTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1674
+   at Bilikis.HRManagementSystem.EmployeePage.btnSendQueryResponse_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1594
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-18 11:16:29,549 [DESKTOP-K8AQEJ2][Thread:5][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=90&error=An unexpected error has occurred&content=0
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeQueryTableUpdateQueryResponse' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeQueryTableUpdateQueryResponse(Int32 queryID, String employeeResponse, String responseDate, String empResponseLetter) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1367
+   at Bilikis.HRManagementSystem.EmployeeQueryTableController.UpdateQueryResponse(EmployeeQueryTableInfo objEmployeeQueryTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1674
+   at Bilikis.HRManagementSystem.EmployeePage.btnSendQueryResponse_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1594
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-18 11:24:44,909 [DESKTOP-K8AQEJ2][Thread:14][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeQueryTableUpdateQueryResponse' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeQueryTableUpdateQueryResponse(Int32 queryID, String employeeResponse, String responseDate, String empResponseLetter) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1367
+   at Bilikis.HRManagementSystem.EmployeeQueryTableController.UpdateQueryResponse(EmployeeQueryTableInfo objEmployeeQueryTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1674
+   at Bilikis.HRManagementSystem.EmployeePage.btnSendQueryResponse_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1594
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-18 11:24:44,941 [DESKTOP-K8AQEJ2][Thread:14][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=90&error=An unexpected error has occurred&content=0
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeQueryTableUpdateQueryResponse' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteNonQuery(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeQueryTableUpdateQueryResponse(Int32 queryID, String employeeResponse, String responseDate, String empResponseLetter) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1367
+   at Bilikis.HRManagementSystem.EmployeeQueryTableController.UpdateQueryResponse(EmployeeQueryTableInfo objEmployeeQueryTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1674
+   at Bilikis.HRManagementSystem.EmployeePage.btnSendQueryResponse_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1594
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

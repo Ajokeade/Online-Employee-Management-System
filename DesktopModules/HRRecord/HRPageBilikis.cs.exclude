@@ -1,0 +1,398 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Reflection;
+using System.Web.UI.WebControls;
+
+using DotNetNuke;
+using DotNetNuke.Common.Utilities;
+using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Modules.Actions;
+using DotNetNuke.Security;
+using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Services.Localization;
+using System.Web.SessionState;
+using System.IO;
+using Bilikis.HRManagementSystem;
+
+
+namespace Bilikis.HRManagementSystem
+{
+    public partial class HRPage : PortalModuleBase, IActionable
+    {
+        #region Optional Interfaces
+        public ModuleActionCollection ModuleActions
+        {
+            get
+            {
+                ModuleActionCollection Actions = new ModuleActionCollection();
+                Actions.Add(this.GetNextActionID(), Localization.GetString(ModuleActionType.AddContent, this.LocalResourceFile), ModuleActionType.AddContent, "", "", this.EditUrl(), false, SecurityAccessLevel.Edit, true, false);
+                return Actions;
+            }
+        }
+        #endregion
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if(!IsPostBack)
+            {
+                MViewHRPage.ActiveViewIndex = 0;
+            }
+        }
+        protected void welEmplomentBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 1;
+
+        }
+        protected void welConfirmBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 2;
+        }
+        protected void welTransferBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 4;
+        }
+        protected void welLeave_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 5;
+        }
+        protected void welQuery_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 6;
+            
+        }
+        protected void welDiscipline_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 7;
+        }
+        protected void welAppraisal_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 8;
+        }
+        protected void welPromotion_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 9;
+        }
+        protected void welPensionRetirement_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 10;
+        }
+        protected void employmentNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 2;
+        }
+        protected void backToWelcomBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+        protected void confirmNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 3;
+        }
+      
+        protected void confirmHomePage_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 1;
+        }
+        protected void transferNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 4;
+        }
+        protected void tansferBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 2;
+        }
+        protected void transferHomePage_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+        protected void leaveNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 5;
+        }
+        protected void leaveBack_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 3;
+        }
+        protected void leaveHomePage_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+        protected void queryNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+        protected void queryBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 4;
+        }
+        protected void queryHomeBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+        protected void disciplineNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 7;
+        }
+        protected void disciplineBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 5;
+        }
+        protected void disciplineHomeBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+
+        protected void appraisalNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 8;
+        }
+        protected void appraisalBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 6;
+        }
+        protected void appraisalHomeBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+
+        protected void promoNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 9;
+        }
+        protected void promoBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 7;
+        }
+        protected void promoHomeBtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 10;
+        }
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 8;
+        }
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 0;
+        }
+
+        protected void sendEmploymentLetterBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        protected void GViewApprovedApplicantsList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        protected void DropDownList6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Label27.Visible = true;
+            //FileUpload1.Visible = true;
+            sendEmploymentLetterBtn.Visible = true;
+            GViewApprovedApplicantsList.Visible = true;
+           // DataGridViewRow row = new GridViewRow();
+            //foreach (GridViewRow g1 in GridViewRow.Rows)
+            //{
+            
+            //}
+
+        }
+        protected void welProfilebtn_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 16;
+        }
+         protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            MViewHRPage.ActiveViewIndex = 13;
+        }
+         protected void LinkButton3_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 15;
+         }
+         protected void Button6_Click(object sender, EventArgs e)
+         {
+             Button7.Visible = true;
+         }
+         protected void LinkButton2_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 14;
+         }
+         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+         {
+           
+         }
+         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+         {
+             
+         }
+         protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+         {
+             trainingStartDateCalendar.Visible = true;
+         }
+         protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
+         {
+             TransferDate.Visible = true;
+         }
+         protected void Button9_Click(object sender, EventArgs e)
+         {
+            
+         }
+         protected void DropDownList28_SelectedIndexChanged(object sender, EventArgs e)
+         {
+           
+             Image2.Visible = true;
+
+         }
+         protected void Button1_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 0;
+         }
+         protected void DropDownList30_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             Panel2.Visible = true;
+         }
+        
+         protected void ratingKey_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             if (ratingKey.SelectedItem.Text == "Consistently exceeds expectations")
+             {
+                 txtratingPoint1.Text = "5";
+             }
+             else if (ratingKey.SelectedItem.Text == "Often exceeds expectations")
+             {
+                 txtratingPoint1.Text = "4";
+             }
+             else if (ratingKey.SelectedItem.Text == "Meets expectations")
+             {
+                 txtratingPoint1.Text = "3";
+             }
+             else if (ratingKey.SelectedItem.Text == "Some improvement needed")
+             {
+                 txtratingPoint1.Text = "2";
+             }
+             else if (ratingKey.SelectedItem.Text == "Major improvement needed")
+             {
+                 txtratingPoint1.Text = "1";
+             }
+
+             else
+             {
+                 txtratingPoint1.Text = "0";
+             }
+         }
+         protected void ImageButton11_Click(object sender, ImageClickEventArgs e)
+         {
+             Calendar1.Visible = true;
+         }
+         protected void btnFrmTrainigToHome_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 0;
+         }
+         protected void transferEmployeeList_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             Label123.Text = "Ikeja Branch";
+             Label124.Text = "Accounting";
+         }
+         protected void btnFrmTransferToHome(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 0;
+         }
+         protected void LeaveEmployeeList_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             GridView4.Visible = true;
+             grantLeaveBtn.Visible = true;
+             Button22.Visible = true;
+         }
+         protected void Button21_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 0;
+         }
+         protected void ImageButton6_Click(object sender, ImageClickEventArgs e)
+         {
+             disciplineDateCalender.Visible = true;
+         }
+         protected void LinkButton18_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 6;
+         }
+         protected void LinkButton20_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 6;
+         }
+         protected void LinkButton21_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 7;
+         }
+         protected void LinkButton19_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 7;
+         }
+         protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+         {
+             IssueDateCalendar.Visible = true;
+         }
+         protected void welTraining_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 3;
+         }
+         protected void LinkButton22_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 0;
+         }
+         protected void LinkButton23_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 1;
+         }
+         protected void LinkButton24_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 16;
+         }
+         protected void LinkButton25_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 2;
+         }
+         protected void LinkButton26_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 3;
+         }
+         protected void LinkButton27_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 4;
+         }
+         protected void LinkButton28_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 5;
+         }
+         protected void LinkButton29_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 6;
+         }
+         protected void LinkButton30_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 8;
+         }
+         protected void LinkButton31_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 9;
+         }
+         protected void LinkButton32_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 10;
+         }
+         protected void welRetirement_Click(object sender, EventArgs e)
+         {
+             MViewHRPage.ActiveViewIndex = 11;
+         }
+         protected void ImageButton13_Click(object sender, ImageClickEventArgs e)
+         {
+             DataePromotedCalender0.Visible = true;
+         }
+}
+}

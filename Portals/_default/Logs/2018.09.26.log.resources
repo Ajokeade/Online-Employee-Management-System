@@ -1,0 +1,188 @@
+2018-09-26 15:08:19,398 [DESKTOP-47HQU5P][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeLeaveTableAddLeaveApplication' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-26 15:08:19,441 [DESKTOP-47HQU5P][Thread:10][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=90&error=An unexpected error has occurred&content=0
+System.InvalidOperationException: The stored procedure 'dbo.EmployeeLeaveTableAddLeaveApplication' doesn't exist.
+   at System.Data.SqlClient.SqlCommand.DeriveParameters()
+   at System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   at Microsoft.ApplicationBlocks.Data.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-26 15:10:52,820 [DESKTOP-47HQU5P][Thread:10][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'LeaveID', table 'HRManagementSystem.dbo.EmployeeLeaveTable'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-26 15:10:52,857 [DESKTOP-47HQU5P][Thread:10][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=90&error=An unexpected error has occurred&content=0
+System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'LeaveID', table 'HRManagementSystem.dbo.EmployeeLeaveTable'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-26 15:13:17,113 [DESKTOP-47HQU5P][Thread:6][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException: Cannot insert explicit value for identity column in table 'EmployeeLeaveTable' when IDENTITY_INSERT is set to OFF.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-26 15:13:17,156 [DESKTOP-47HQU5P][Thread:6][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=90&error=An unexpected error has occurred&content=0
+System.Data.SqlClient.SqlException: Cannot insert explicit value for identity column in table 'EmployeeLeaveTable' when IDENTITY_INSERT is set to OFF.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-26 15:22:19,507 [DESKTOP-47HQU5P][Thread:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.Data.SqlClient.SqlException: Cannot insert explicit value for identity column in table 'EmployeeLeaveTable' when IDENTITY_INSERT is set to OFF.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-26 15:22:19,597 [DESKTOP-47HQU5P][Thread:9][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=90&error=An unexpected error has occurred&content=0
+System.Data.SqlClient.SqlException: Cannot insert explicit value for identity column in table 'EmployeeLeaveTable' when IDENTITY_INSERT is set to OFF.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters)
+   at Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues)
+   at Bilikis.HRManagementSystem.SqlDataProvider.EmployeeLeaveTableAddLeaveApplication(Int32 leaveType_FK, String leaveDescription, String startDate, String endDate, String duration, Int32 level_FK, String leaveThreshold, String dateApplied, Int32 dept_FK, Int32 employeeID_FK) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\SqlDataProvider.cs:line 1491
+   at Bilikis.HRManagementSystem.EmployeeLeaveTableController.AddLeaveApplication(EmployeeLeaveTableInfo objEmployeeLeaveTable) in c:\PROJECTS\HR3\HRManagementSytemm\App_Code\HRMSUtilities\HRMSController.cs:line 1853
+   at Bilikis.HRManagementSystem.EmployeePage.grantLeaveBtn_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\EmployeePage.ascx.cs:line 1710
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

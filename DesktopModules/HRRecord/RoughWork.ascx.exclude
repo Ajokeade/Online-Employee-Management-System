@@ -1,0 +1,359 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RoughWork.ascx.cs" Inherits="DesktopModules_HRRecord_RoughWork" %>
+<style type="text/css">
+    .auto-style1 {
+        height: 23px;
+    }
+</style>
+
+<table style="width:100%;">
+    <tr>
+        <td class="auto-style1"></td>
+        <td rowspan="3">
+            <asp:MultiView ID="MultiView1" runat="server">
+                <asp:View ID="View1" runat="server">
+                </asp:View>
+                <asp:View ID="ViewQuery" runat="server">
+    <table style="border: medium solid #CC0066; width:100%;">
+        <tr>
+            <td class="auto-style96">
+                &nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbQuery" runat="server" Font-Bold="True" Font-Size="14pt" ForeColor="#CC0066" Text="Query Management"></asp:Label>
+            </td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style97">
+                &nbsp;</td>
+            <td class="auto-style104">
+                <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="EmployeeID" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style101">
+                <asp:DropDownList ID="queryEmployeeList" runat="server" Width="250px">
+                </asp:DropDownList>
+            </td>
+            <td class="auto-style11">
+                &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="auto-style96">&nbsp;</td>
+             <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbQueyType" runat="server" Font-Bold="True" Text="Query Type" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:DropDownList ID="queryTypeList" runat="server" style="margin-left: 0px" Width="250px">
+                </asp:DropDownList>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="QueryTitle" runat="server" Font-Bold="True" Text="Query Title" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:TextBox ID="txtQueryTitle" runat="server" Width="250px"></asp:TextBox>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">
+                &nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbQueryDesc" runat="server" Font-Bold="True" Text="Query Description" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:TextBox ID="txtQueryDesc" runat="server" Width="250px"></asp:TextBox>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbIssueDate0" runat="server" Font-Bold="True" Text="Issue Date" Font-Size="14pt"></asp:Label>
+            </td>
+          <td class="auto-style100">
+                <%--<asp:DropDownList ID="queryIssuedDayList" runat="server" Width="83px">
+                </asp:DropDownList>
+                &nbsp;<asp:DropDownList ID="queryIssuedMonthList" runat="server" Width="83px">
+                    <asp:ListItem Value="00">*Month*</asp:ListItem>
+                    <asp:ListItem Value="01">Jan</asp:ListItem>
+                    <asp:ListItem Value="02">Feb</asp:ListItem>
+                    <asp:ListItem Value="03">March</asp:ListItem>
+                    <asp:ListItem Value="04">april</asp:ListItem>
+                    <asp:ListItem Value="05">May</asp:ListItem>
+                    <asp:ListItem Value="06">June</asp:ListItem>
+                    <asp:ListItem Value="07">July</asp:ListItem>
+                    <asp:ListItem Value="08">August</asp:ListItem>
+                    <asp:ListItem Value="09">Sept</asp:ListItem>
+                    <asp:ListItem Value="10">Oct</asp:ListItem>
+                    <asp:ListItem Value="11">Nov</asp:ListItem>
+                    <asp:ListItem Value="12">Dec</asp:ListItem>
+                </asp:DropDownList>
+                &nbsp;<asp:DropDownList ID="queryIssuedYearList" runat="server" AutoPostBack="True" Width="83px">
+                </asp:DropDownList>--%>
+                <%--   <asp:RequiredFieldValidator ID="DOBReqFieldVal0" runat="server" ControlToValidate="txtAge" Display="Dynamic" ErrorMessage="DOBRequired" SetFocusOnError="True">DOBRequired</asp:RequiredFieldValidator>
+        -<%---%>&nbsp;&nbsp;<asp:Label ID="LbHrQueryIssueDate" runat="server" Enabled="False" Font-Bold="True" ForeColor="#CC0066" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <tr>
+                <td></td>
+            </tr>
+            </caption>
+        </tr>
+       <%-- <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbIssueDate" runat="server" Font-Bold="True" Text="Issue Date" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:TextBox ID="txtQueryIssuedDate" runat="server" Width="225px"></asp:TextBox>
+                <asp:ImageButton ID="queryIssuedDateCalenderImageBtn" runat="server" Height="25px" ImageUrl="~/images/calendar.png" Width="25px" />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">
+                <asp:Calendar ID="IssueDateCalendar" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px" Visible="False">
+                    <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+                    <NextPrevStyle VerticalAlign="Bottom" />
+                    <OtherMonthDayStyle ForeColor="#808080" />
+                    <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+                    <SelectorStyle BackColor="#CCCCCC" />
+                    <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+                    <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                    <WeekendDayStyle BackColor="#FFFFCC" />
+                </asp:Calendar>
+            </td>
+            <td>&nbsp;</td>
+        </tr>--%>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbIssueBy" runat="server" Font-Bold="True" Text="IssueBy" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:Label ID="LbIssuedBy" runat="server" Font-Bold="True" ForeColor="#FF6666"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="auto-style96">
+                &nbsp;</td>
+            <td class="auto-style103">&nbsp;<asp:Label ID="LbEmpResponse" runat="server" Font-Bold="True" Text="Employee Response" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:Label ID="LbQueryResponse" runat="server" Enabled="False" Font-Bold="True" ForeColor="#CC0066" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+
+         <tr>
+            <td class="auto-style96">&nbsp;</td>
+             <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbEmpResponse0" runat="server" Font-Bold="True" Text="Response Date" Font-Size="15pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:Label ID="LbQueryResponseDate" runat="server" Enabled="False" Font-Bold="True" ForeColor="#CC0066" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbEmpResponse1" runat="server" Font-Bold="True" Text="Discipline Type" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:DropDownList ID="disciplineTypeList" runat="server">
+                </asp:DropDownList>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style98"></td>
+            <td class="auto-style105">
+                <asp:Label ID="LbEmpResponse2" runat="server" Font-Bold="True" Text="Discipline Date" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style102">
+                <asp:DropDownList ID="disiciplinedDayList" runat="server" Width="83px">
+                </asp:DropDownList>
+                &nbsp;<asp:DropDownList ID="disiciplinedMonthList" runat="server" Width="83px">
+                    <asp:ListItem Value="00">*Month*</asp:ListItem>
+                    <asp:ListItem Value="01">Jan</asp:ListItem>
+                    <asp:ListItem Value="02">Feb</asp:ListItem>
+                    <asp:ListItem Value="03">March</asp:ListItem>
+                    <asp:ListItem Value="04">april</asp:ListItem>
+                    <asp:ListItem Value="05">May</asp:ListItem>
+                    <asp:ListItem Value="06">June</asp:ListItem>
+                    <asp:ListItem Value="07">July</asp:ListItem>
+                    <asp:ListItem Value="08">August</asp:ListItem>
+                    <asp:ListItem Value="09">Sept</asp:ListItem>
+                    <asp:ListItem Value="10">Oct</asp:ListItem>
+                    <asp:ListItem Value="11">Nov</asp:ListItem>
+                    <asp:ListItem Value="12">Dec</asp:ListItem>
+                </asp:DropDownList>
+                &nbsp;<asp:DropDownList ID="disiciplinedYearList" runat="server" AutoPostBack="True" Width="83px">
+                </asp:DropDownList>
+                <%--   <asp:RequiredFieldValidator ID="DOBReqFieldVal0" runat="server" ControlToValidate="txtAge" Display="Dynamic" ErrorMessage="DOBRequired" SetFocusOnError="True">DOBRequired</asp:RequiredFieldValidator>
+        --%>&nbsp;&nbsp;</td>
+            <td class="auto-style99"></td>
+        </tr>
+        <tr>
+            <td class="auto-style96">
+                &nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="Label13" runat="server" Font-Bold="True" Text="Discipline Date" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:TextBox ID="txtDisciplineDate" runat="server" Width="225px"></asp:TextBox>
+                <asp:ImageButton ID="disciplinedDateCalenderImageBtn" runat="server" Height="25px" ImageUrl="~/images/calendar.png" OnClick="disciplinedDateCalenderImageBtn_Click" Width="25px" />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">
+                &nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">
+                <asp:Calendar ID="disciplineDateCalendar" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px" Visible="False">
+                    <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+                    <NextPrevStyle VerticalAlign="Bottom" />
+                    <OtherMonthDayStyle ForeColor="#808080" />
+                    <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+                    <SelectorStyle BackColor="#CCCCCC" />
+                    <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+                    <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                    <WeekendDayStyle BackColor="#FFFFCC" />
+                </asp:Calendar>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">
+                <asp:Label ID="LbDisplineBy" runat="server" Font-Bold="True" Text="DisciplineBy" Font-Size="14pt"></asp:Label>
+            </td>
+            <td class="auto-style100">
+                <asp:Label ID="LbDisciplinedBy" runat="server" Enabled="False" Font-Bold="True" ForeColor="#CC0066" Text="Label" Visible="False"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">
+                <asp:Button ID="disciplineBtn" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" Text="Discipline" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="QualifFinishBtn6" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="#33CC33" OnClick="QualifFinishBtn_Click" Text="Finish" />
+            </td>
+            <td>
+                &nbsp;
+                </td>
+        </tr>
+        <tr>
+            <td class="auto-style96">&nbsp;</td>
+            <td class="auto-style103">&nbsp;</td>
+            <td class="auto-style100">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</asp:View>
+            </asp:MultiView>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+

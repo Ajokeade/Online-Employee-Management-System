@@ -1,0 +1,54 @@
+2018-09-24 15:30:49,205 [DESKTOP-47HQU5P][Thread:12][ERROR] DotNetNuke.Modules.Admin.Users.User - Thread was being aborted.
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at DotNetNuke.Modules.Admin.Users.ManageUsers.UserUpdateCompleted(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\Admin\Security\ManageUsers.ascx.cs:line 1147
+   at DotNetNuke.Entities.Modules.UserUserControlBase.OnUserUpdateCompleted(EventArgs e)
+   at DotNetNuke.Modules.Admin.Users.User.cmdUpdate_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\Admin\Security\User.ascx.cs:line 494
+2018-09-24 15:33:35,897 [DESKTOP-47HQU5P][Thread:14][ERROR] DotNetNuke.Modules.Admin.Users.User - Thread was being aborted.
+System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   at DotNetNuke.Modules.Admin.Users.ManageUsers.UserUpdateCompleted(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\Admin\Security\ManageUsers.ascx.cs:line 1147
+   at DotNetNuke.Entities.Modules.UserUserControlBase.OnUserUpdateCompleted(EventArgs e)
+   at DotNetNuke.Modules.Admin.Users.User.cmdUpdate_Click(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\Admin\Security\User.ascx.cs:line 494
+2018-09-24 17:04:28,303 [DESKTOP-47HQU5P][Thread:9][FATAL] DotNetNuke.Framework.PageBase - An error has occurred while loading page.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Bilikis.HRManagementSystem.SupervisorPage.Page_Load(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\SupervisorPage.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2018-09-24 17:04:28,413 [DESKTOP-47HQU5P][Thread:9][ERROR] DotNetNuke.Framework.PageBase - ~/Default.aspx?tabid=92&error=Object+reference+not+set+to+an+instance+of+an+object.&content=0
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Bilikis.HRManagementSystem.SupervisorPage.Page_Load(Object sender, EventArgs e) in c:\PROJECTS\HR3\HRManagementSytemm\DesktopModules\HRRecord\SupervisorPage.ascx.cs:line 55
+   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

@@ -1,0 +1,316 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Reflection;
+using System.Web.UI.WebControls;
+
+using DotNetNuke;
+using DotNetNuke.Common.Utilities;
+using DotNetNuke.Entities.Modules;
+using DotNetNuke.Entities.Modules.Actions;
+using DotNetNuke.Security;
+using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Services.Localization;
+using System.Web.SessionState;
+using System.IO;
+using Bilikis.HRManagementSystem;
+
+namespace Bilikis.HRManagementSystem
+{
+    public partial class EmployeePage : PortalModuleBase, IActionable
+    {
+
+
+        #region Optional Interfaces
+        public ModuleActionCollection ModuleActions
+        {
+            get
+            {
+                ModuleActionCollection Actions = new ModuleActionCollection();
+                Actions.Add(this.GetNextActionID(), Localization.GetString(ModuleActionType.AddContent, this.LocalResourceFile), ModuleActionType.AddContent, "", "", this.EditUrl(), false, SecurityAccessLevel.Edit, true, false);
+                return Actions;
+            }
+
+        }
+        #endregion
+
+      
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                MViewEmployee.ActiveViewIndex = 0;
+                // year dropdownlist
+                var al = new ArrayList();
+                al.Add("--Please Select--");
+                for (var i = 1900; i <= 2018; i++)
+                {
+                    al.Add(i);
+                }
+
+                qualifStartYearList.DataSource = al;
+                qualifStartYearList.DataBind();
+                qualifEndYearList.DataSource = al;
+                qualifEndYearList.DataBind();
+            }
+
+
+        }
+        protected void welEmplomentBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 1;
+        }
+        protected void employeeNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 2;
+        }
+        protected void qualifNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 3;
+        }
+        protected void qualifBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 2;
+        }
+        protected void certNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 4;
+        }
+        protected void certBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 3;
+        }
+        protected void docNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 5;
+        }
+        protected void docBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 3;
+        }
+        protected void refNextBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 6;
+        }
+        protected void refBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 4;
+        }
+        protected void goToAppraisalBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 7;
+        }
+        protected void GuarBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 5;
+        }
+
+        protected void welAppraisal_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 7;
+        }
+        protected void appraisalBackBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 6;
+        }
+        protected void appraisalHomeBtn_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 0;
+        }
+        protected void GViewDoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 1;
+        }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 2;
+        }
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 3;
+        }
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 4;
+        }
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 4;
+        }
+        protected void LinkButton4_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 6;
+        }
+        protected void LinkButton19_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 7;
+        }
+        protected void LinkButton20_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 8;
+        }
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 10;
+        }
+        protected void certAddBtn_Click(object sender, EventArgs e)
+        {
+            GViewCert.Visible = true;
+        }
+        protected void Button14_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 5;
+        }
+        protected void Button12_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 6;
+        }
+        protected void Button13_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 7;
+        }
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 8;
+        }
+        protected void qulifAddBtn_Click(object sender, EventArgs e)
+        {
+            GViewQualification.Visible = true;
+        }
+        protected void LinkButton36_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 0;
+        }
+        protected void LinkButton42_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 8;
+        }
+       
+        protected void Button17_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 4;
+        }
+        protected void Button18_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 0;
+        }
+        protected void LinkButton37_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 1;
+        }
+        protected void LinkButton38_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 2;
+        }
+        protected void LinkButton39_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 5;
+        }
+        protected void LinkButton40_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 6;
+        }
+        protected void LinkButton41_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 7;
+        }
+        protected void LinkButton44_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 9;
+        }
+        protected void LinkButton43_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 10;
+        }
+        protected void LinkButton45_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 11;
+        }
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 0;
+        }
+        protected void Button15_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 9;
+        }
+        protected void ratingKey1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ratingKey1.SelectedItem.Text == "Consistently exceeds expectations")
+            {
+                txtratingPoint1.Text = "5";
+            }
+            else if (ratingKey1.SelectedItem.Text == "Often exceeds expectations")
+            {
+                txtratingPoint1.Text = "4";
+            }
+            else if (ratingKey1.SelectedItem.Text == "Meets expectations")
+            {
+                txtratingPoint1.Text = "3";
+            }
+            else if (ratingKey1.SelectedItem.Text == "Some improvement needed")
+            {
+                txtratingPoint1.Text = "2";
+            }
+            else if (ratingKey1.SelectedItem.Text == "Major improvement needed")
+            {
+                txtratingPoint1.Text = "1";
+            }
+            else
+            {
+                txtratingPoint1.Text = "0";
+            }
+        }
+        protected void ImageButton7_Click(object sender, ImageClickEventArgs e)
+        {
+            Calendar1.Visible = true;
+        }
+        protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
+        {
+            nxtYearCompletionDateCalendar1.Visible = true;
+        }
+        protected void Button19_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 0;
+        }
+        protected void LinkButton22_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 3;
+        }
+        protected void btnNextToRefree_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 3;
+        }
+        protected void LinkButton28_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 3;
+        }
+        protected void LinkButton23_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 4;
+        }
+        protected void LinkButton29_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 4;
+        }
+        protected void LinkButton21_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 2;
+        }
+        protected void LinkButton27_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 2;
+        }
+        protected void LinkButton33_Click(object sender, EventArgs e)
+        {
+            MViewEmployee.ActiveViewIndex = 2;
+        }
+}
+}
